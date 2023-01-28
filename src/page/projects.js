@@ -1,11 +1,12 @@
 import Header from "../components/header";
 import projectList from "../components/projectList";
+import { projectFake } from "../data";
 
 const projectPage = () => {
   return `
-  ${Header()}
-  <h1>Project Page </h1>
-  ${projectList()}
+    ${Header()}
+      <h1>Project Page </h1>
+    ${projectList({projects: projectFake})}
   `;
 };
 

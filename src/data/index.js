@@ -1,3 +1,12 @@
+
+const menus = [
+  {id: 1,name: "Trang chu",link: "/"},
+  {id: 2,name: "Du an",link: "/projects"},
+  {id: 3,name: "Lien he",link: "/contact"},
+  {id: 1,name: "Bai viet",link: "/posts"},
+]
+
+
 const projectFake = [
   {
     id: 1,
@@ -21,4 +30,5 @@ const projectFake = [
   },
 ];
 
-export { projectFake };
+export { projectFake ,menus };
+
