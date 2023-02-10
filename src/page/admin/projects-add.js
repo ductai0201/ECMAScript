@@ -1,7 +1,6 @@
 import { router, useEffect } from "../../lib";
 
 const AdminProjectsAddPage = () => {
-  const projects = JSON.parse(localStorage.getItem("projects")) || [];
   useEffect(() => {
     const form = document.querySelector("#form-add");
     const project_name = document.querySelector("#project-name");
@@ -9,16 +8,21 @@ const AdminProjectsAddPage = () => {
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      const project = {
-        id: projects.length + 1,
+      const formData = {
         name: project_name.value,
         author: project_author.value,
       };
-      console.log(project)
-      projects.push(project);
-      localStorage.setItem("projects", JSON.stringify(projects));
-    //    console.log(projects)
-      router.navigate("/admin/projects");
+      console.log(formData);
+      //call API
+
+      // like setTimeOut
+      fetch("http://localhost:3000/projects",{
+        method : 'POST',
+        headers : {
+          'Content-Type': 'application/json'
+        },
+        body : JSON.stringify(formData),
+      }).then(() => router.navigate("/admin/projects"));
     });
   });
   return `
