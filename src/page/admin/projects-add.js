@@ -13,9 +13,9 @@ const AdminProjectsAddPage = () => {
         author: project_author.value,
       };
       console.log(formData);
-      //call API
+      //call API (fetch....)
 
-      // like setTimeOut
+      // Giong setTimeOut (router....)
       fetch("http://localhost:3000/projects",{
         method : 'POST',
         headers : {

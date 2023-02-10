@@ -1,29 +1,29 @@
 {
   "projects": [
     {
+      "id": 6,
       "name": "Dự án 1",
-      "author": "Datlt",
-      "id": 2
-    },
-    {
-      "name": "Dự án 2",
-      "author": "Đạt",
-      "id": 3
-    },
-    {
-      "name": "Dự án 2",
-      "author": "Đạt",
-      "id": 4
+      "author": "Datlt345"
     },
     {
       "name": "Dự án tốt nghiệp",
-      "author": "Datlt",
-      "id": 5
+      "author": "Datlt10",
+      "id": 7
     },
     {
-      "name": "Dự án 2",
-      "author": "abc",
-      "id": 6
+      "name": "Dự án 1",
+      "author": "Datlt10",
+      "id": 8
+    },
+    {
+      "name": "ESMA",
+      "author": "Datlt",
+      "id": 9
+    },
+    {
+      "name": "Dự án tốt nghiệp",
+      "author": "Datlt10",
+      "id": 10
     }
   ]
 }

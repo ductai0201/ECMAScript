@@ -11,20 +11,19 @@ const AdminProjectsPage = () => {
   }, []);
 
   useEffect(function () {
-    const btns = document.querySelectorAll(".btn");
+    const btns = document.querySelectorAll(".btn-remove");
     for (let btn of btns) {
       btn.addEventListener("click", function () {
-        // console.log(this.dataset.id)
         const id = this.dataset.id;
-        console.log(id)
-        fetch(`http://localhost:3000/projects/{$id}`,{
-            method: "DELETE",
-        }).then(()=>{
-            // nếu xóa thành công thì render lại màn hình
-            const newprojects = projects.filter((project) => project.id != id);
-            setProjects(newprojects);
-        })
-        
+        console.log(id);
+
+        fetch(`http://localhost:3000/projects/${id}`, {
+          method: "DELETE",
+        }).then(() => {
+          // nếu xóa thành công thì render lại màn hình
+          const newprojects = projects.filter((project) => project.id != id);
+          setProjects(newprojects);
+        });
       });
     }
   });
@@ -51,7 +50,7 @@ const AdminProjectsPage = () => {
                             <button data-id="${
                               project.id
                             }" class="btn btn-danger btn-remove">Remove</button>
-                            <a href="/admin/projects/${project.id}/edit">Edit</a>
+                            <a href="/#/admin/projects/${project.id}/edit">Edit</a>
                             </td>
                         </tr>
                         `;
